@@ -1,0 +1,76 @@
+#title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #525050;
+    text-align: center;
+    font-family: sans-serif;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 75px;
+    letter-spacing: 2px;
+}
+
+.basic-button {
+    background-color: #f43543;
+    border: 1px solid #f43543;
+    border-radius: 40px;
+    width: 90px;
+    height: 35px;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    box-shadow: 1px 4px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    padding-top: 9px;
+}
+
+.basic-button:hover {
+    cursor: pointer;
+}
+
+#btn-request-session {
+    display: none;
+}
+
+#surfly-session-modal {
+    background: white;
+    text-align: center;
+    height: 340px;
+    width: 575px;
+    border-radius: 7px;
+    margin: 150px auto;
+}
+
+.surfly-modal-dialog {
+    color: #3c4859;
+    margin: 20px;
+}
+
+.surfly-modal-header {
+    padding: 0px;
+}
+
+h4 {
+    padding-bottom: 15px;
+    font-size: 50px;
+    margin-top: 60px;
+}
+
+.modal-button {
+    background-color: #f43543;
+    border: 1px solid #f43543;
+    border-radius: 40px;
+    width: 90px;
+    height: 35px;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    margin: 24px;;
+}
