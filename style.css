@@ -74,3 +74,13 @@ h4 {
     font-family: sans-serif;
     margin: 24px;;
 }
+
+#id-cover {
+    margin: 35px;
+}
+
+#surfly_gif {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
