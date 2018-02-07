@@ -41,8 +41,8 @@
 #surfly-session-modal {
     background: white;
     text-align: center;
-    height: 340px;
-    width: 575px;
+    height: 235px;
+    width: 450px;
     border-radius: 7px;
     margin: 150px auto;
 }
@@ -72,7 +72,7 @@ h4 {
     color: white;
     letter-spacing: 2px;
     font-family: sans-serif;
-    margin: 24px;;
+    margin: auto;
 }
 
 #id-cover {
