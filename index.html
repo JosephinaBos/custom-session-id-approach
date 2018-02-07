@@ -52,15 +52,15 @@
             //Make sure that once the session is ended, the correct session is removed from the active session list
             Surfly.on('session_ended', function(session) {
                 document.getElementById("surfly-session-modal").style.display = "none";
-                var sessionLink = session.leaderLink;
-                var allSessions = Surfly._allSessions;
-                var activeSessions = [];
-                for (var i = 0; i < allSessions.length; i++) {
-                    if (allSessions[i].leaderLink !== sessionLink) {
-                        activeSessions.push(allSessions[i]);
-                    }
-                }
-                Surfly._allSessions = activeSessions;
+                // var sessionLink = session.leaderLink;
+                // var allSessions = Surfly._allSessions;
+                // var activeSessions = [];
+                // for (var i = 0; i < allSessions.length; i++) {
+                //     if (allSessions[i].leaderLink !== sessionLink) {
+                //         activeSessions.push(allSessions[i]);
+                //     }
+                // }
+                // Surfly._allSessions = activeSessions;
             })
         });
 
