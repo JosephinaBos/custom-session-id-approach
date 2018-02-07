@@ -41,7 +41,7 @@
 #surfly-session-modal {
     background: white;
     text-align: center;
-    height: 235px;
+    height: 205px;
     width: 450px;
     border-radius: 7px;
     margin: 150px auto;
@@ -72,7 +72,7 @@ h4 {
     color: white;
     letter-spacing: 2px;
     font-family: sans-serif;
-    margin: auto;
+    margin-right: 30px;
 }
 
 #id-cover {
@@ -82,5 +82,9 @@ h4 {
 #surfly_gif {
     width: 30px;
     height: 30px;
+    margin: auto;
+}
+
+#btn-end-session {
     margin: auto;
 }
