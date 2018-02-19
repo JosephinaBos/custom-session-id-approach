@@ -50,7 +50,7 @@
                 }
             }
             //Make sure that once the session is ended, the correct session is removed from the active session list
-            if !(Surfly.isInsideSession) {
+            if (!Surfly.isInsideSession) {
                 Surfly.on('session_ended', function(session) {
                     document.getElementById("surfly-session-modal").style.display = "none";
                     var sessionLink = session.leaderLink;
