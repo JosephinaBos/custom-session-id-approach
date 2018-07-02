@@ -50,6 +50,12 @@
                 if (Surfly.currentSession) {
                     document.getElementById("btn-request-session").style.display = "none";
                     document.getElementById("btn-draw-off").style.display = "block";
+
+                    function drawingOff() {
+                        Surfly.setDrawingSettings({
+                            mode: 'disabled'
+                        });
+                    };
                 }
             }
             //Make sure that once the session is ended, the correct session is removed from the active session list
@@ -62,12 +68,6 @@
                 //         drawing_timeout: 3
                 //     });
                 // };
-
-                function drawingOff() {
-                    Surfly.setDrawingSettings({
-                        mode: 'disabled'
-                    });
-                };
 
                 Surfly.on('session_ended', function(session) {
                     document.getElementById("surfly-session-modal").style.display = "none";
