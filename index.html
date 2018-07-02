@@ -14,8 +14,8 @@
     <h1 id="title">Customized session ID approach</h1>
     <div class="footer" id="footer">
        <button class="basic-button" id="btn-request-session" style="display: none;"  data-toggle="modal" data-target="#surfly-session-modal"><p>Get help</p></button>
-       <button class="basic-button" id="btn-draw-on" style="display: none;" onclick="drawingOn();"><p>On</p></button>
-       <button class="basic-button" id="btn-draw-off" style="display: none;" onclick="drawingOff();"><p>Off</p></button>
+       <button class="basic-button" id="btn-draw-on" style="display: none;" onclick='drawingOn(); document.getElementById("btn-draw-on").style.display = "none"; document.getElementById("btn-draw-off").style.display = "block";'><p>On</p></button>
+       <button class="basic-button" id="btn-draw-off" style="display: none;" onclick='drawingOff(); document.getElementById("btn-draw-off").style.display = "none"; document.getElementById("btn-draw-on").style.display = "block";><p>Off</p></button>
     </div>
 
     <div id="surfly-session-modal" class="modal fade" role="dialog">
@@ -55,8 +55,6 @@
             //Make sure that once the session is ended, the correct session is removed from the active session list
             if (!Surfly.isInsideSession) {
                 function drawingOn() {
-                    document.getElementById("btn-draw-on").style.display = "none";
-                    document.getElementById("btn-draw-off").style.display = "block";
                     Surfly.setDrawingSettings({
                         mode: 'permanent',
                         color: 'purple',
