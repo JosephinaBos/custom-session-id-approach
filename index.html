@@ -50,12 +50,13 @@
                 if (Surfly.currentSession) {
                     document.getElementById("btn-request-session").style.display = "none";
                     document.getElementById("btn-draw-on").style.display = "block";
-                    document.getElementById("btn-draw-off").style.display = "block";
                 }
             }
             //Make sure that once the session is ended, the correct session is removed from the active session list
             if (!Surfly.isInsideSession) {
                 function drawingOn() {
+                    document.getElementById("btn-draw-on").style.display = "none";
+                    document.getElementById("btn-draw-off").style.display = "block";
                     Surfly.setDrawingSettings({
                         mode: 'permanent',
                         color: 'purple',
@@ -65,6 +66,8 @@
                 };
 
                 function drawingOff() {
+                    document.getElementById("btn-draw-off").style.display = "none";
+                    document.getElementById("btn-draw-on").style.display = "block";
                     Surfly.setDrawingSettings({
                         mode: 'disabled'
                     });
