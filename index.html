@@ -14,6 +14,7 @@
     <h1 id="title">Customized session ID approach</h1>
     <div class="footer" id="footer">
        <button class="basic-button" id="btn-request-session" style="display: none;"  data-toggle="modal" data-target="#surfly-session-modal"><p>Get help</p></button>
+       <button class="basic-button" id="btn-draw" style="display: none;" onclick="drawingOn();><p>Magic Marker on/off</p></button>
     </div>
 
     <div id="surfly-session-modal" class="modal fade" role="dialog">
@@ -47,10 +48,26 @@
                 document.getElementById("btn-request-session").style.display = "block";
                 if (Surfly.currentSession) {
                     document.getElementById("btn-request-session").style.display = "none";
+                    document.getElementById("btn-draw").style.display = "block";
                 }
             }
             //Make sure that once the session is ended, the correct session is removed from the active session list
             if (!Surfly.isInsideSession) {
+                function drawingOn() {
+                    Surfly.setDrawingSettings({
+                        mode: 'permanent',
+                        color: 'purple',
+                        drawing_width: 15,
+                        drawing_timeout: 3
+                    });
+                };
+
+                function drawingOff() {
+                    Surfly.setDrawingSettings({
+                        mode: 'disabled'
+                    });
+                };
+
                 Surfly.on('session_ended', function(session) {
                     document.getElementById("surfly-session-modal").style.display = "none";
                     var sessionLink = session.leaderLink;
