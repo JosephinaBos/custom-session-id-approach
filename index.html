@@ -92,7 +92,7 @@
             // When the session is started, show the session PIN so that it can be passed to the helpdesk agent
             .on('session_started', function(session, event) {
                 // display the session PIN
-                console.log(event)
+                console.log("Session started event message:" event)
                 var showId = document.querySelector("#session-id");
                 showId.textContent = session.pin;
 
@@ -106,7 +106,7 @@
                 });
             })
             .on('session_ended', function(session, event) {
-                console.log(event)
+                console.log("Session ended event message:" event)
             })
             .startLeader();
     }
