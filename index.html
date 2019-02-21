@@ -1,5 +1,12 @@
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Full featured custom session ID approach</title>
 <style>
 
 #btn-request-session {
@@ -58,13 +65,12 @@
 
     // Surfly session options, you need to provide your own widget key
     var settings = {
-        widget_key: '0c17c102b943457a82838fe64a5a0a0d',
-        // block_until_agent_joins: false,
-        // hide_until_agent_joins: true,
+        widget_key: '24f023888ca9419484b74f10eca984b2',
+        block_until_agent_joins: false,
+        hide_until_agent_joins: true,
         start_docked: true,
         splash: false,
-        chat_integration: "zendesk"
-        // end_of_session_popup_url: "https://example.com/survey"  // link to a survey page that will be shown after session end
+        end_of_session_popup_url: "https://nl.surveymonkey.com/r/XRYJK96"  // link to a survey page that will be shown after session end
     };
 
     // Initialize the JS API
@@ -93,7 +99,6 @@
             // When the session is started, show the session PIN so that it can be passed to the helpdesk agent
             .on('session_started', function(session, event) {
                 // display the session PIN
-                console.log('Session started event message:', event)
                 var showId = document.querySelector("#session-id");
                 showId.textContent = session.pin;
 
@@ -106,14 +111,9 @@
                     session.end();
                 });
             })
-            .on('session_ended', function(session, event) {
-                console.log('Session ended event message:', event)
-            })
+            // Start the session immediately
             .startLeader();
     }
     </script>
-    <!-- Start of surflysupport Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=3b444689-7087-46ea-8e82-1733dac11b33"> </script>
-<!-- End of surflysupport Zendesk Widget script -->
 </body>
 </html>
